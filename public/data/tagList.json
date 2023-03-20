@@ -1,0 +1,263 @@
+{
+  "tags": [
+    {
+      "id": 1,
+      "name": {
+        "ch": "钱包",
+        "en": "Wallet"
+      }
+    },
+    {
+      "id": 2,
+      "name": {
+        "ch": "跨链",
+        "en": "Cross-chain"
+      }
+    },
+    {
+      "id": 3,
+      "name": {
+        "ch": "跨链桥",
+        "en": "Cross Chain Bridge"
+      }
+    },
+    {
+      "id": 4,
+      "name": {
+        "ch": "中心化交易所",
+        "en": "CEX"
+      }
+    },
+    {
+      "id": 5,
+      "name": {
+        "ch": "去中心化交易所",
+        "en": "DEX"
+      }
+    },
+    {
+      "id": 6,
+      "name": {
+        "ch": "衍生品",
+        "en": "Derivative"
+      }
+    },
+    {
+      "id": 7,
+      "name": {
+        "ch": "杠杆",
+        "en": "Leverage"
+      }
+    },
+    {
+      "id": 8,
+      "name": {
+        "ch": "永续合约",
+        "en": "Perpetual Contract"
+      }
+    },
+    {
+      "id": 9,
+      "name": {
+        "ch": "期货",
+        "en": "Futures"
+      }
+    },
+    {
+      "id": 10,
+      "name": {
+        "ch": "期权",
+        "en": "Options"
+      }
+    },
+    {
+      "id": 11,
+      "name": {
+        "ch": "借贷",
+        "en": "Lending and Borrowing"
+      }
+    },
+    {
+      "id": 12,
+      "name": {
+        "ch": "闪电贷",
+        "en": "Flash Loan"
+      }
+    },
+    {
+      "id": 13,
+      "name": {
+        "ch": "流动性池",
+        "en": "Liquidity Pool"
+      }
+    },
+    {
+      "id": 14,
+      "name": {
+        "ch": "质押挖矿",
+        "en": "Staking"
+      }
+    },
+    {
+      "id": 15,
+      "name": {
+        "ch": "流动性挖矿",
+        "en": "Liquidity Farming"
+      }
+    },
+    {
+      "id": 16,
+      "name": {
+        "ch": "锁仓挖矿",
+        "en": "Locking"
+      }
+    },
+    {
+      "id": 17,
+      "name": {
+        "ch": "交易挖矿",
+        "en": "Trading Farming"
+      }
+    },
+    {
+      "id": 18,
+      "name": {
+        "ch": "流动性质押",
+        "en": "Liquid Staking"
+      }
+    },
+    {
+      "id": 19,
+      "name": {
+        "ch": "收益聚合器",
+        "en": "Yield Aggregator"
+      }
+    },
+    {
+      "id": 20,
+      "name": {
+        "ch": "自动做市商",
+        "en": "AMM"
+      }
+    },
+    {
+      "id": 21,
+      "name": {
+        "ch": "合成资产",
+        "en": "Synthetic Asset"
+      }
+    },
+    {
+      "id": 22,
+      "name": {
+        "ch": "NFT",
+        "en": "NFT"
+      }
+    },
+    {
+      "id": 23,
+      "name": {
+        "ch": "X to Earn",
+        "en": "X to Earn"
+      }
+    },
+    {
+      "id": 24,
+      "name": {
+        "ch": "稳定币",
+        "en": "Stablecoin"
+      }
+    },
+    {
+      "id": 25,
+      "name": {
+        "ch": "生态",
+        "en": "Ecosystem"
+      }
+    },
+    {
+      "id": 26,
+      "name": {
+        "ch": "Ethereum",
+        "en": "Ethereum"
+      }
+    },
+    {
+      "id": 27,
+      "name": {
+        "ch": "BSC(BNB Chain)",
+        "en": "BSC(BNB Chain)"
+      }
+    },
+    {
+      "id": 28,
+      "name": {
+        "ch": "Tron",
+        "en": "Tron"
+      }
+    },
+    {
+      "id": 29,
+      "name": {
+        "ch": "Arbitrum",
+        "en": "Arbitrum"
+      }
+    },
+    {
+      "id": 30,
+      "name": {
+        "ch": "Polygon",
+        "en": "Polygon"
+      }
+    },
+    {
+      "id": 31,
+      "name": {
+        "ch": "Avalanche",
+        "en": "Avalanche"
+      }
+    },
+    {
+      "id": 32,
+      "name": {
+        "ch": "Optimism",
+        "en": "Optimism"
+      }
+    },
+    {
+      "id": 33,
+      "name": {
+        "ch": "Fantom",
+        "en": "Fantom"
+      }
+    },
+    {
+      "id": 34,
+      "name": {
+        "ch": "Solana",
+        "en": "Solana"
+      }
+    },
+    {
+      "id": 35,
+      "name": {
+        "ch": "Cronos",
+        "en": "Cronos"
+      }
+    },
+    {
+      "id": 36,
+      "name": {
+        "ch": "ETH2.0",
+        "en": "ETH2.0"
+      }
+    },
+    {
+      "id": 37,
+      "name": {
+        "ch": "游戏",
+        "en": "Game"
+      }
+    }
+  ]
+}

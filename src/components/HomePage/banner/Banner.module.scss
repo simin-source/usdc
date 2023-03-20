@@ -1,0 +1,81 @@
+.banner_box {
+    width: 100%;
+    height: auto;
+    background-image: url("../../../../public/img/index/bg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 80px;
+
+    >div:first-child {
+        width: 100%;
+        max-width: 1210px;
+        min-width: 990px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .logo {
+            cursor: pointer;
+            font-size: 29px;
+            color: #fff;
+            align-items: center;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .slogan {
+            width: 100%;
+            letter-spacing: -1.29px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: 700;
+            padding-left: 20px;
+            margin: 24px 0;
+        }
+
+        .desc {
+            width: 65%;
+            font-size: 18px;
+            font-weight: 500;
+            padding-left: 20px;
+            color: #fff;
+            margin-bottom: 24px;
+            text-align: justify;
+        }
+
+        .btn_group {
+            padding-left: 20px;
+
+            .purple{
+                background-color: #8656ef;
+                border: 1px solid #8656ef;
+                border-radius: 5px;
+                font-weight: 500;
+                color: #fff;
+
+                &:hover {
+                    background-color: #b9a1f2;
+                }
+            }
+
+            .white {
+                border: 1px solid #fff;
+                background-color: transparent;
+                color: #fff;
+                border-radius: 5px;
+                font-weight: 500;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #8656ef;
+                }
+            }
+        }
+    }
+}

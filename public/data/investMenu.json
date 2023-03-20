@@ -1,0 +1,38 @@
+[
+  { "label": "钱包", "key": "wallet" },
+  {
+    "label": "交易",
+    "key": "trading",
+    "children": [
+      { "label": "跨链转移/兑换", "key": "cross-chain-swap" },
+      { "label": "现货交易", "key": "spot-trading" },
+      {
+        "label": "衍生品交易",
+        "key": "derivative-trading",
+        "children": [
+          { "label": "兑换", "key": "swapping" },
+          { "label": "杠杆交易", "key": "margin-trading" },
+          { "label": "永续合约", "key": "perpetual-contract" },
+          { "label": "期货", "key": "futures" },
+          { "label": "期权", "key": "options" }
+        ]
+      }
+    ]
+  },
+  { "label": "借贷", "key": "lending" },
+  {
+    "label": "套利",
+    "key": "yearn",
+    "children": [
+      { "label": "流动性池", "key": "liquidity-pool" },
+      { "label": "质押挖矿", "key": "staking" },
+      { "label": "流动性挖矿", "key": "liquidity-farming" },
+      { "label": "锁仓挖矿", "key": "locking" },
+      { "label": "交易挖矿", "key": "trading-farming" },
+      { "label": "收益聚合器", "key": "aggregator" }
+    ]
+  },
+  { "label": "NFT", "key": "nft" },
+  { "label": "游戏", "key": "game" },
+  { "label": "X to Earn", "key": "x-to-earn" }
+]

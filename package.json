@@ -1,0 +1,31 @@
+{
+  "name": "usdc",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode test",
+    "build": "vite build",
+    "build_tst": "vite build --mode test",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "element-plus": "^1.0.2-beta.44",
+    "jump.js": "^1.0.2",
+    "swiper": "^6.8.4",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "@vitejs/plugin-vue": "^1.1.4",
+    "@vitejs/plugin-vue-jsx": "^1.1.4",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vuedx/typecheck": "^0.6.3",
+    "@vuedx/typescript-plugin-vue": "^0.6.3",
+    "consola": "^2.15.3",
+    "sass": "^1.32.8",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.5",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "2.4.4",
+    "vite-plugin-style-import": "^2.0.0"
+  }
+}
