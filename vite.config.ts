@@ -3,7 +3,6 @@ import { defineConfig } from 'vite';
 
 import vue from '@vitejs/plugin-vue';
 import vueJSX from '@vitejs/plugin-vue-jsx';
-import {createStyleImportPlugin,ElementPlusResolve} from 'vite-plugin-style-import';
 /**
  * https://vitejs.dev/config/
  * @type {import('vite').UserConfig}
@@ -12,17 +11,7 @@ export default defineConfig({
   root: './src/pages/',
   publicDir: '../../public',
   base: './',
-  plugins: [vue(), vueJSX(), createStyleImportPlugin({
-    resolves:[ElementPlusResolve()],
-    libs: [{
-      libraryName: 'element-plus',
-      esModule: true,
-      ensureStyleFile: true,
-      resolveStyle: name => {
-        return `element-plus/lib/theme-chalk/${name}.css`;
-      },
-    }],
-  }),
+  plugins: [vue(), vueJSX(),
   {
     name: 'Multi-Page-AssetsPath',
     transformIndexHtml: {
@@ -42,13 +31,6 @@ export default defineConfig({
     jsxFragment: 'Fragment',
     jsxInject: 'import { h } from "vue"',
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@import "./src/assets/style/comm.scss";',
-      },
-    },
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -61,6 +43,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/pages/index.html',
+        investment: './src/pages/investment/index.html'
       },
     },
     emptyOutDir: true,
