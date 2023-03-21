@@ -4,7 +4,7 @@ import LeftRight from '@/components/HomePage/leftRight/LeftRight';
 import Footer from '@/views/footer/Footer';
 import Header from '@/views/header/Header';
 import { defineComponent, Fragment } from 'vue';
-
+import LogoBanner from '@/components/HomePage/LogoBanner';
 export default defineComponent({
     name: 'Index',
     render() {
@@ -12,8 +12,9 @@ export default defineComponent({
             <Header parent="index" />
             <div id="top"></div>
             <Banner />
-            <LeftRight/>
-            <FourCard/>
+            <LeftRight />
+            <LogoBanner></LogoBanner>
+            <FourCard />
             <Footer parent="index"/>
         </Fragment>;
     },
