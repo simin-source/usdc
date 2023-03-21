@@ -43,7 +43,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/pages/index.html',
-        investment: './src/pages/investment/index.html'
+        investment: './src/pages/investment/index.html',
+        use: './src/pages/use/index.html',
+        intoout: './src/pages/intoout/index.html',
+        advantage: './src/pages/advantage/index.html'
       },
     },
     emptyOutDir: true,

@@ -3,7 +3,7 @@ import { defineComponent, Fragment } from 'vue';
 
 
 import {
-    copy, link, pc,
+    copy, link, pc,leftBox
 } from './Footer.module.scss';
 
 enum PageType {
@@ -13,7 +13,8 @@ enum PageType {
     CONTACT = 'contact',
     ABOUT = 'about',
 }
-
+let Data = [{name:'开发者', },{name:'公司名', },{name:'联系方式',},{name:'语言切换',}]
+let FooterData = [{label:'Mantax'},{label:'亚链有限公司'},{ label:'邮箱'},{ label:'简体中文/繁体中文'}]
 export default defineComponent({
     name: 'Footer',
     props: {
@@ -61,25 +62,30 @@ export default defineComponent({
                 <div style={{ width: '100%', height: '100%', background: '#042053' }}>
                     <div class={`container link_ ${link}`}>
                         <div class={`content flex-start ${pc}`}>
-                            <div class="flex-between">
-                                <dl>
-                                    <dt>开发者</dt>
-                                </dl>
-                                <dl>
-                                    <dt>公司名</dt>
-                                </dl>
-                                <dl>
-                                    <dt>联系方式</dt>
-                                </dl>
+                            <div class="flex-between" style={{ display: 'flex', flexDirection:'column'}}>
+                                {Data.map(e => {
+                                    return <div class={leftBox}> 
+                                        <dt style={{marginBottom:'10px'}}>{ e.name}</dt>
+                                    </div>
+                                })}
+                                
+                        
+                            </div>
+                            <div style={{ display: 'flex', flexDirection:'column'}}>
+                            {FooterData.map(e => {
+                                     return <div class={leftBox}> 
+                                     <dt style={{marginBottom:'10px'}}>{ e.label}</dt>
+                                 </div>
+                                })}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class={`container copy_ ${copy}`}>
+                {/* <div class={`container copy_ ${copy}`}>
                     <div class="content">
                         <div>xxxx.com版权所有</div>
                     </div>
-                </div>
+                </div> */}
             </Fragment >
         );
     },

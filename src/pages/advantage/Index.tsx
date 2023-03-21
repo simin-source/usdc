@@ -4,11 +4,12 @@ import { defineComponent, Fragment } from 'vue';
 import {} from './Index.module.scss';
 
 export default defineComponent({
-    name: 'Intomoney',
+    name: 'Advantage',
     render() {
         return <Fragment>
-        <Header parent="intomoney" />
-        <Footer parent="intomoney"/>
+        <Header parent="advantage" />
+        <div style={{ marginTop: '150px' }}>advantage</div>
+        <Footer parent="advantage"/>
     </Fragment>;
     },
 });

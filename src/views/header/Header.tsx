@@ -8,8 +8,7 @@ import {
 enum PageType {
     INDEX = 'index',
     ADVANTAGE = 'advantage',
-    INTOMONEY = 'intomoney',
-    OUTMONEY = 'outmoney',
+    INTOOUT = 'intoout',
     USE = 'use',
     INVESTMENT = 'investment',
 }
@@ -75,7 +74,7 @@ export default defineComponent({
         let urlChoice = './';
         if (this.parent === PageType.INDEX) {
             urlChoice = './';
-        } else if (this.parent === PageType.ADVANTAGE || this.parent === PageType.INTOMONEY || this.parent === PageType.OUTMONEY || this.parent === PageType.USE || this.parent === PageType.INVESTMENT) {
+        } else if (this.parent === PageType.ADVANTAGE || this.parent === PageType.INTOOUT || this.parent === PageType.USE || this.parent === PageType.INVESTMENT) {
             urlChoice = '../';
         }
         return <div id="header" class={`container ${header}`} style={{ background: `${this.parent === PageType.INDEX ? `rgba(45, 34, 64,${this.opacity})` : 'linear-gradient(90deg, #2D223E, #7F3099)'}` }}>
@@ -90,17 +89,14 @@ export default defineComponent({
                     <li class={`${this.parent === PageType.ADVANTAGE ? active : ''}`}>
                         <a href={`${urlChoice}advantage/`}>优势</a>
                     </li>
-                    <li class={`${this.parent === PageType.INTOMONEY ? active : ''}`}>
-                        <a href={`${urlChoice}intomoney/`}>入金</a>
-                    </li>
                     <li class={`${this.parent === PageType.USE ? active : ''}`}>
                         <a href={`${urlChoice}use/`}>用途</a>
                     </li>
                     <li class={`${this.parent === PageType.INVESTMENT ? active : ''}`}>
                         <a href={`${urlChoice}investment/`}>投资</a>
                     </li>
-                    <li class={`${this.parent === PageType.OUTMONEY ? active : ''}`}>
-                        <a href={`${urlChoice}outmoney/`}>出金</a>
+                    <li class={`${this.parent === PageType.INTOOUT ? active : ''}`}>
+                        <a href={`${urlChoice}intoout/`}>入金&出金</a>
                     </li>
                 </ul>
             </div>
