@@ -1,4 +1,3 @@
-import menuData from '@/assets/data/investMenu.json';
 import { InvestState } from '@/pages/investment/Index';
 import { ElMenu, ElMenuItem, ElSubMenu } from 'element-plus';
 import { defineComponent } from 'vue';
@@ -12,8 +11,8 @@ export default defineComponent({
     render() {
         return <div class={menu_box}>
             <ElMenu class={menu_content}>
-                <h3 class="title"> Categories</h3>
-                {menuData.map(item => {
+                {/* <h3 class={title}> Categories</h3> */}
+                {InvestState.menuList.map((item: any) => {
                     if (item.children) {
                         return <ElSubMenu
                             index={item.key}
@@ -23,7 +22,7 @@ export default defineComponent({
                                 ),
                             }}
                         >
-                            {item.children?.map(item_ => {
+                            {item.children?.map((item_: any) => {
                                 return <MenuItem key={item.key} item={item_} />;
                             })}
                         </ElSubMenu>;

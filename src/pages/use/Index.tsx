@@ -8,7 +8,7 @@ export default defineComponent({
     render() {
         return <Fragment>
             <Header parent="use" />
-            <div style={{ marginTop: '150px' }}>use</div>
+            <div style={{ marginTop: '150px' }}> </div>
             <Footer parent="use" />
         </Fragment>;
     },

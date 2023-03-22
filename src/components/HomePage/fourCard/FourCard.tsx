@@ -3,8 +3,6 @@ import {
     card_box, section, card, title
 } from './FourCard.module.scss';
 
-import icon from '@/assets/img/favicon.ico';
-
 let contairData = [{
     title: 'Tether for Individuals',
     text: 'Tether tokens offer exceptional liquidity on tier one exchanges giving traders the ability to take advantage of arbitrage opportunities in the fastest time possible.',
@@ -28,7 +26,7 @@ export default defineComponent({
                 <div class={`flex-between ${section}`}>
                     {contairData.map(item => {
                         return <div class={card}>
-                            <img src={icon} alt="icon找不到" />
+                            <img src="/img/index/favicon.ico" alt="icon找不到" />
                             <h2>{item.title}</h2>
                             <p>{item.text}</p>
                         </div>

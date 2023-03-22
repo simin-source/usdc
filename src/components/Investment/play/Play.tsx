@@ -2,7 +2,7 @@ import { InvestState } from '@/pages/investment/Index';
 import { ElInput } from 'element-plus';
 import { defineComponent } from 'vue';
 import {
-    card, card_desc, card_list, card_logo, none, play_box, search, tag, title, tag_list
+    card, card_desc, card_list, card_logo, none, play_box, search, tag, tag_list, title
 } from './Play.module.scss';
 
 export default defineComponent({
@@ -22,24 +22,25 @@ export default defineComponent({
                     <ElInput v-model={InvestState.searchValue} onChange={this.handleChange} size="large" placeholder="Please Input" clearable />
                 </div>
             </div>
-            <div class={`flex-start ${card_list}`}>
-                {InvestState.activePlayList?.length > 0 ? InvestState.activePlayList?.map((item: any) => {
-                    return <div class={card}>
-                        <div><img src={item.src ? item.src : '/img/index/card1.svg'} alt="logo找不到" class={card_logo} /></div>
-                        <div class={`flex-start ${tag_list}`}>
-                            {item.tag?.map((item_: any, index: number) => {
-                                if (index > 2) return null;
-                                const res = InvestState.tagsList?.filter((i: any) => i.id === item_.tag_id)?.[0];
-                                if (res?.name?.ch) {
-                                    return <div class={tag}>{res?.name?.ch}</div>;
-                                } else {
-                                    return null;
-                                }
-                            })}
-                        </div>
-                        <div class={card_desc}>{item.description_ch}</div>
-                    </div>;
-                }) : <div class={none}>无</div>}
+            <div class={card_list}>
+                <div>
+                    {InvestState.activePlayList?.length > 0 ? InvestState.activePlayList?.map((item: any) => {
+                        return <div class={card}>
+                            <div><img src={item.src ? item.src : '/img/index/card1.svg'} alt="logo找不到" class={card_logo} /></div>
+                            <div class={`flex-start ${tag_list}`}>
+                                {item.tag?.map((item_: any, index: number) => {
+                                    const res = InvestState.tagsList?.filter((i: any) => i.id === item_.tag_id)?.[0];
+                                    if (res?.name?.ch) {
+                                        return <div class={tag}>{res?.name?.ch}</div>;
+                                    } else {
+                                        return null;
+                                    }
+                                })}
+                            </div>
+                            <div class={card_desc}>{item.description_ch}</div>
+                        </div>;
+                    }) : <div class={`flex-center ${none}`}>无</div>}
+                </div>
             </div>
         </div>;
     },
