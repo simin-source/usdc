@@ -1,0 +1,347 @@
+{
+    "tags": [
+        {
+            "id": 1,
+            "name": {
+                "ch": "錢包",
+                "en": "Wallet"
+            }
+        },
+        {
+            "id": 2,
+            "name": {
+                "ch": "跨鏈",
+                "en": "Cross-chain"
+            }
+        },
+        {
+            "id": 3,
+            "name": {
+                "ch": "跨鏈橋",
+                "en": "Cross Chain Bridge"
+            }
+        },
+        {
+            "id": 4,
+            "name": {
+                "ch": "中心化交易所",
+                "en": "CEX"
+            }
+        },
+        {
+            "id": 5,
+            "name": {
+                "ch": "去中心化交易所",
+                "en": "DEX"
+            }
+        },
+        {
+            "id": 6,
+            "name": {
+                "ch": "衍生品",
+                "en": "Derivative"
+            }
+        },
+        {
+            "id": 7,
+            "name": {
+                "ch": "杠桿",
+                "en": "Leverage"
+            }
+        },
+        {
+            "id": 8,
+            "name": {
+                "ch": "永續合約",
+                "en": "Perpetual Contract"
+            }
+        },
+        {
+            "id": 9,
+            "name": {
+                "ch": "期貨",
+                "en": "Futures"
+            }
+        },
+        {
+            "id": 10,
+            "name": {
+                "ch": "期權",
+                "en": "Options"
+            }
+        },
+        {
+            "id": 11,
+            "name": {
+                "ch": "借貸",
+                "en": "Lending and Borrowing"
+            }
+        },
+        {
+            "id": 12,
+            "name": {
+                "ch": "閃電貸",
+                "en": "Flash Loan"
+            }
+        },
+        {
+            "id": 13,
+            "name": {
+                "ch": "流動性池",
+                "en": "Liquidity Pool"
+            }
+        },
+        {
+            "id": 14,
+            "name": {
+                "ch": "質押挖礦",
+                "en": "Staking"
+            }
+        },
+        {
+            "id": 15,
+            "name": {
+                "ch": "流動性挖礦",
+                "en": "Liquidity Farming"
+            }
+        },
+        {
+            "id": 16,
+            "name": {
+                "ch": "鎖倉挖礦",
+                "en": "Locking"
+            }
+        },
+        {
+            "id": 17,
+            "name": {
+                "ch": "交易挖礦",
+                "en": "Trading Farming"
+            }
+        },
+        {
+            "id": 18,
+            "name": {
+                "ch": "流動性質押",
+                "en": "Liquid Staking"
+            }
+        },
+        {
+            "id": 19,
+            "name": {
+                "ch": "收益聚合器",
+                "en": "Yield Aggregator"
+            }
+        },
+        {
+            "id": 20,
+            "name": {
+                "ch": "自動做市商",
+                "en": "AMM"
+            }
+        },
+        {
+            "id": 21,
+            "name": {
+                "ch": "合成資產",
+                "en": "Synthetic Asset"
+            }
+        },
+        {
+            "id": 22,
+            "name": {
+                "ch": "NFT",
+                "en": "NFT"
+            }
+        },
+        {
+            "id": 23,
+            "name": {
+                "ch": "X to Earn",
+                "en": "X to Earn"
+            }
+        },
+        {
+            "id": 24,
+            "name": {
+                "ch": "穩定幣",
+                "en": "Stablecoin"
+            }
+        },
+        {
+            "id": 25,
+            "name": {
+                "ch": "生態",
+                "en": "Ecosystem"
+            }
+        },
+        {
+            "id": 26,
+            "name": {
+                "ch": "Ethereum",
+                "en": "Ethereum"
+            }
+        },
+        {
+            "id": 27,
+            "name": {
+                "ch": "BSC(BNB Chain)",
+                "en": "BSC(BNB Chain)"
+            }
+        },
+        {
+            "id": 28,
+            "name": {
+                "ch": "Tron",
+                "en": "Tron"
+            }
+        },
+        {
+            "id": 29,
+            "name": {
+                "ch": "Arbitrum",
+                "en": "Arbitrum"
+            }
+        },
+        {
+            "id": 30,
+            "name": {
+                "ch": "Polygon",
+                "en": "Polygon"
+            }
+        },
+        {
+            "id": 31,
+            "name": {
+                "ch": "Avalanche",
+                "en": "Avalanche"
+            }
+        },
+        {
+            "id": 32,
+            "name": {
+                "ch": "Optimism",
+                "en": "Optimism"
+            }
+        },
+        {
+            "id": 33,
+            "name": {
+                "ch": "Fantom",
+                "en": "Fantom"
+            }
+        },
+        {
+            "id": 34,
+            "name": {
+                "ch": "Solana",
+                "en": "Solana"
+            }
+        },
+        {
+            "id": 35,
+            "name": {
+                "ch": "Cronos",
+                "en": "Cronos"
+            }
+        },
+        {
+            "id": 36,
+            "name": {
+                "ch": "ETH2.0",
+                "en": "ETH2.0"
+            }
+        },
+        {
+            "id": 37,
+            "name": {
+                "ch": "遊戲",
+                "en": "Game"
+            }
+        },
+        {
+            "id": 38,
+            "name": {
+                "ch": "慈善&救災",
+                "en": "Charity"
+            }
+        },
+        {
+            "id": 39,
+            "name": {
+                "ch": "眾籌&籌款",
+                "en": "Crowd"
+            }
+        },
+        {
+            "id": 40,
+            "name": {
+                "ch": "P2P/C2C",
+                "en": "P2P/C2C"
+            }
+        },
+        {
+            "id": 41,
+            "name": {
+                "ch": "支付",
+                "en": "Pay"
+            }
+        },
+        {
+            "id": 42,
+            "name": {
+                "ch": "消費",
+                "en": "Consuming"
+            }
+        },
+        {
+            "id": 43,
+            "name": {
+                "ch": "入金",
+                "en": "Deposit"
+            }
+        },
+        {
+            "id": 44,
+            "name": {
+                "ch": "出金",
+                "en": "Withdraw"
+            }
+        },
+        {
+            "id": 45,
+            "name": {
+                "ch": "加密貨幣ATM",
+                "en": "ATM"
+            }
+        },
+        {
+            "id": 46,
+            "name": {
+                "ch": "加密貨幣借記卡&信用卡",
+                "en": "Credit Card"
+            }
+        },
+        {
+            "id": 47,
+            "name": {
+                "ch": "OTC櫃臺",
+                "en": "OTC"
+            }
+        },
+        {
+            "id": 48,
+            "name": {
+                "ch": "獨立出入金項目",
+                "en": "Independent D&W Platform"
+            }
+        },
+        {
+            "id": 49,
+            "name": {
+                "ch": "出入金聚合器",
+                "en": "D&W Aggregator"
+            }
+        }
+    ]
+}

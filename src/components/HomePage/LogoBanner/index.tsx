@@ -3,13 +3,12 @@ import { defineComponent, onMounted, ref } from 'vue';
 import {
     item, logo_banner, swiper_swper, text, title, wrap
 } from './index.module.scss';
-SwiperCore.use([Autoplay,]);
+SwiperCore.use([Autoplay]);
 import jsonData from '@/assets/data/itemCards.json'
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.scss';
 const index = ref(0);
 let timer: any = null;
-const swper = ref(null);
 const SwiperSlidea = jsonData;
 const SwiperSlideData = SwiperSlidea.items;
 const animate = () => {
@@ -57,14 +56,14 @@ export default defineComponent({
                         <div id="wrap" class={wrap} ref="swiper" onMouseenter={mouseEenter} onMouseleave={mouseLeve}>
                             {SwiperSlideData.map(e => {
                                 return <div class={item} onClick={() => onMenuClick}>
-                                    <a href={e.link} ><img src={e.src} alt={e.description_ch} style={{ width: '80px', height: '38px' }} /> </a>
+                                    <a href={e.link} ><img src={e.src} alt={e.description_ch}/> </a>
                                 </div>;
                             })}
                         </div>
                         <div id="wrap1" >
                             {SwiperSlideData.map(e => {
                                 return <div onClick={() => onMenuClick}>
-                                    <a href={e.link} ><img src={e.src} alt={e.description_ch} style={{ width: '80px', height: '38px' }} /> </a>
+                                    <a href={e.link} ><img src={e.src} alt={e.description_ch}/> </a>
                                 </div>;
                             })}
                         </div>

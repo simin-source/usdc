@@ -1,0 +1,88 @@
+[
+  {
+    "label": "交易",
+    "key": "trading",
+    "children": [
+      {
+        "label": "跨鏈轉移/兌換",
+        "key": "cross-chain-swap"
+      },
+      {
+        "label": "現貨交易",
+        "key": "spot-trading"
+      },
+      {
+        "label": "衍生品交易",
+        "key": "derivative-trading",
+        "children": [
+          {
+            "label": "兌換",
+            "key": "swapping"
+          },
+          {
+            "label": "杠桿交易",
+            "key": "margin-trading"
+          },
+          {
+            "label": "永續合約",
+            "key": "perpetual-contract"
+          },
+          {
+            "label": "期貨",
+            "key": "futures"
+          },
+          {
+            "label": "期權",
+            "key": "options"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "借貸",
+    "key": "lending"
+  },
+  {
+    "label": "套利",
+    "key": "yearn",
+    "children": [
+      {
+        "label": "流動性池",
+        "key": "liquidity-pool"
+      },
+      {
+        "label": "質押挖礦",
+        "key": "staking"
+      },
+      {
+        "label": "流動性挖礦",
+        "key": "liquidity-farming"
+      },
+      {
+        "label": "鎖倉挖礦",
+        "key": "locking"
+      },
+      {
+        "label": "交易挖礦",
+        "key": "trading-farming"
+      },
+      {
+        "label": "收益聚合器",
+        "key": "aggregator"
+      }
+    ]
+  },
+  {
+    "label": "NFT",
+    "key": "nft"
+  },
+  {
+    "label": "遊戲",
+    "key": "game"
+  },
+  {
+    "label": "X to Earn",
+    "key": "x-to-earn"
+  }
+]

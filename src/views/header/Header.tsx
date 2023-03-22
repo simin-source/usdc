@@ -1,5 +1,6 @@
 import jump from 'jump.js';
 import { defineComponent } from 'vue';
+import { FooterState } from '../footer/Footer';
 
 import {
     active, header, logo,
@@ -82,21 +83,21 @@ export default defineComponent({
                 <div class={`flex-center ${logo}`}>
                     <a class="flex-start" href={this.parent === 'index' ? 'javascript: void(0);' : `${urlChoice}`}>
                         <img src={`${urlChoice}/logo.webp`} alt="usdc_logo" />
-                        <div>USDC 投资指南</div>
+                        <div>USDC {FooterState.isFan ? '投資指南' : '投资指南'}</div>
                     </a>
                 </div>
                 <ul class="flex-center">
                     <li class={`${this.parent === PageType.ADVANTAGE ? active : ''}`}>
-                        <a href={`${urlChoice}advantage/`}>优势</a>
+                        <a href={`${urlChoice}advantage/?fan=${FooterState.isFan}`}>{FooterState.isFan ? '優勢' : '优势'}</a>
                     </li>
                     <li class={`${this.parent === PageType.USE ? active : ''}`}>
-                        <a href={`${urlChoice}use/`}>用途</a>
+                        <a href={`${urlChoice}use/?fan=${FooterState.isFan}`}>用途</a>
                     </li>
                     <li class={`${this.parent === PageType.INVESTMENT ? active : ''}`}>
-                        <a href={`${urlChoice}investment/`}>投资</a>
+                        <a href={`${urlChoice}investment/?fan=${FooterState.isFan}`}>{FooterState.isFan ? '投資' : '投资'}</a>
                     </li>
                     <li class={`${this.parent === PageType.INTOOUT ? active : ''}`}>
-                        <a href={`${urlChoice}intoout/`}>入金&出金</a>
+                        <a href={`${urlChoice}intoout/?fan=${FooterState.isFan}`}>入金&出金</a>
                     </li>
                 </ul>
             </div>

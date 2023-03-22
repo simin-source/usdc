@@ -1,20 +1,22 @@
 import jump from 'jump.js';
-import { defineComponent, Fragment } from 'vue';
-
+import { defineComponent, reactive, Fragment } from 'vue';
 
 import {
-    copy, link, pc,leftBox
+    copy, leftBox, link, pc
 } from './Footer.module.scss';
 
 enum PageType {
     INDEX = 'index',
-    DESCRIPTION = 'description',
-    SOLUTION = 'solution',
-    CONTACT = 'contact',
-    ABOUT = 'about',
+    ADVANTAGE = 'advantage',
+    INTOOUT = 'intoout',
+    USE = 'use',
+    INVESTMENT = 'investment',
 }
-let Data = [{name:'开发者', },{name:'公司名', },{name:'联系方式',},{name:'语言切换',}]
-let FooterData = [{label:'Mantax'},{label:'亚链有限公司'},{ label:'邮箱'},{ label:'简体中文/繁体中文'}]
+export const FooterState = reactive({
+    isFan: false as boolean,
+});
+const Data = [{ name: '开发者', fname: '開發者' }, { name: '公司名', fname: '公司名' }, { name: '联系方式', fname: '聯系方式' }, { name: '语言切换', fname: '語言切換' }];
+const FooterData = [{ label: 'Mantax', flabel: 'Mantax' }, { label: '亚链有限公司', flabel: '亞鏈有限公司' }, { label: '邮箱', flabel: '郵箱' }, { label: '简体中文/繁体中文', flabel: '簡體中文/繁體中文' }];
 export default defineComponent({
     name: 'Footer',
     props: {
@@ -54,7 +56,7 @@ export default defineComponent({
         let urlChoice = './';
         if (this.parent === PageType.INDEX) {
             urlChoice = './';
-        } else if (this.parent === PageType.DESCRIPTION || this.parent === PageType.SOLUTION || this.parent === PageType.CONTACT || this.parent === PageType.ABOUT) {
+        } else if (this.parent === PageType.ADVANTAGE || this.parent === PageType.INTOOUT || this.parent === PageType.INVESTMENT || this.parent === PageType.USE) {
             urlChoice = '../';
         }
         return (
@@ -62,20 +64,23 @@ export default defineComponent({
                 <div style={{ width: '100%', height: '100%', background: '#042053' }}>
                     <div class={`container link_ ${link}`}>
                         <div class={`content flex-start ${pc}`}>
-                            <div class="flex-between" style={{ display: 'flex', flexDirection:'column'}}>
+                            <div class="flex-between" style={{ display: 'flex', flexDirection: 'column' }}>
                                 {Data.map(e => {
-                                    return <div class={leftBox}> 
-                                        <dt style={{marginBottom:'10px'}}>{ e.name}</dt>
-                                    </div>
+                                    return <div class={leftBox}>
+                                        <dt style={{ marginBottom: '10px' }}>{FooterState.isFan ? e.fname : e.name}</dt>
+                                    </div>;
                                 })}
-                                
-                        
                             </div>
-                            <div style={{ display: 'flex', flexDirection:'column'}}>
-                            {FooterData.map(e => {
-                                     return <div class={leftBox}> 
-                                     <dt style={{marginBottom:'10px'}}>{ e.label}</dt>
-                                 </div>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                {FooterData.map(e => {
+                                    return <div class={leftBox}>
+                                        <dt style={{ marginBottom: '10px', cursor: `${e.label === '简体中文/繁体中文' ? 'pointer' : 'default'}` }}
+                                            onClick={() => {
+                                                if (e.label === '简体中文/繁体中文') {
+                                                    FooterState.isFan = !FooterState.isFan;
+                                                }
+                                            }}>{FooterState.isFan ? e.flabel : e.label}</dt>
+                                    </div>;
                                 })}
                             </div>
                         </div>

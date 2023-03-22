@@ -1,4 +1,5 @@
 import { InvestState } from '@/pages/investment/Index';
+import { FooterState } from '@/views/footer/Footer';
 import { ElInput } from 'element-plus';
 import { defineComponent } from 'vue';
 import {
@@ -16,7 +17,7 @@ export default defineComponent({
         return <div class={`flex-start ${play_box}`}>
             <div class={`flex-between ${search}`}>
                 <div class={`flex-center ${title}`}>
-                    玩法说明:
+                    {FooterState.isFan ? '玩法說明:' : '玩法说明:'}
                 </div>
                 <div class="search_input">
                     <ElInput v-model={InvestState.searchValue} onChange={this.handleChange} size="large" placeholder="Please Input" clearable />

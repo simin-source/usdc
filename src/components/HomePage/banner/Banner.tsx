@@ -1,8 +1,8 @@
+import { ElButton } from 'element-plus';
 import { defineComponent } from 'vue';
 import {
-    banner_box, logo, slogan, desc, btn_group, white,purple
+    banner_box, btn_group, desc, logo, purple, slogan,white
 } from './Banner.module.scss';
-import { ElButton } from 'element-plus';
 
 export default defineComponent({
     name: 'Banner',

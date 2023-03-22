@@ -10,7 +10,7 @@ export default defineComponent({
     name: 'MenuList',
     render() {
         return <div class={menu_box}>
-            <ElMenu class={menu_content}>
+            <ElMenu class={menu_content} unique-opened={true} default-active={InvestState.activeKey}>
                 {/* <h3 class={title}> Categories</h3> */}
                 {InvestState.menuList.map((item: any) => {
                     if (item.children) {

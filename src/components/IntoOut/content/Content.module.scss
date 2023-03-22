@@ -1,0 +1,133 @@
+.content_box {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    >div:nth-child(1) {
+        width: 100%;
+        max-width: 1210px;
+        min-width: 990px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            background-color: #5160CE;
+            display: flex;
+            justify-content: flex-end;
+            border-radius: 5px;
+            position: relative;
+
+            .menu {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                position: relative;
+                z-index: 2;
+
+                >div {
+                    flex: 1;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #fff;
+                    font-size: 18px;
+                    transition-duration: 1.5s;
+                }
+            }
+
+            .selector {
+                width: 220px;
+                height: 50px;
+                position: absolute;
+                background: #fff;
+                transition-duration: 0.6s;
+                transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                top: 10px;
+
+                .left {
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    bottom: 0px;
+                    bottom: 0px;
+                    left: -25px;
+                    background: #fff;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        background-color: #5160CE;
+                        border-radius: 25px;
+                        bottom: 0px;
+                        left: -25px;
+                        z-index: 2;
+                    }
+                }
+
+                .right {
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    bottom: 0px;
+                    right: -25px;
+                    background: #fff;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 25px;
+                        background-color: #5160CE;
+                        bottom: 0px;
+                        right: -25px;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+
+        .card_list {
+            width: 100%;
+            height: auto;
+            padding: 20px 0;
+            columns: 2;
+
+            .card {
+                height: auto;
+                padding: 23px;
+                box-shadow: 0 0 10px rgba(159, 114, 255, .12);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                break-inside: avoid; //防止内容折断
+
+                .title {
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+
+                .desc {
+                    line-height: 18px;
+                    margin-top: 10px;
+                }
+
+                >a {
+                    display: inline-block;
+                    margin-top: 10px;
+                    color: #000;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
