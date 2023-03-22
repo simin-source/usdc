@@ -26,7 +26,7 @@ export default defineComponent({
                 <div class={`flex-between ${section}`}>
                     {contairData.map(item => {
                         return <div class={card}>
-                            <img src="/img/index/favicon.ico" alt="icon找不到" />
+                            <img src='/img/index/favicon.ico' alt="icon找不到" />
                             <h2>{item.title}</h2>
                             <p>{item.text}</p>
                         </div>

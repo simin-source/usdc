@@ -63,6 +63,19 @@ export default defineComponent({
                 InvestState.activeKey = InvestState.menuList.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0].key;
                 updatePlay(InvestState.activeKey);
             }
+        } else if (window.location.search.split('=')?.[2].includes('use')) {
+            this.current_index = 2;
+            this.s_width = '110px';
+            this.s_left = '630px';
+            if (FooterState.isFan) {
+                InvestState.menuList = useMenu2;
+            } else {
+                InvestState.menuList = useMenu;
+            }
+            if (decodeURI(window.location.search?.split('=')?.[3])) {
+                InvestState.activeKey = InvestState.menuList.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0].key;
+                updatePlay(InvestState.activeKey);
+            }
         }
         watch(() => InvestState.activeKey, newValue => {
             if (newValue) updatePlay(newValue);

@@ -1,0 +1,52 @@
+.lr_box {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 30px;
+
+    >div:first-child {
+        width: 100%;
+        max-width: 1210px;
+        min-width: 990px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .list {
+        width: 100%;
+        flex-direction: column;
+
+        .list_item {
+
+            .left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .title {
+                    height: 50px;
+                    letter-spacing: -.2px;
+                    font-weight: 700;
+                    padding-top: 20%;
+                }
+
+                .text {
+                    margin: auto;
+                    font-size: 20px;
+                }
+            }
+
+            .right {
+                flex: 1;
+                align-items: center;
+
+                img {
+                    width: 65%;
+                }
+            }
+
+        }
+
+    }
+}

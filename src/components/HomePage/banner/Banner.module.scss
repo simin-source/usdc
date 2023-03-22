@@ -1,7 +1,7 @@
 .banner_box {
     width: 100%;
     height: auto;
-    background-image: url("../../../../public/img/index/bg.webp");
+    background-image: url("../../../../img/index/bg.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -30,10 +30,10 @@
         }
 
         .slogan {
-            width: 100%;
-            letter-spacing: -1.29px;
+            width: 65%;
+            letter-spacing: 1.29px;
             color: #fff;
-            font-size: 50px;
+            font-size: 30px;
             font-weight: 700;
             padding-left: 20px;
             margin: 24px 0;
@@ -50,7 +50,10 @@
         }
 
         .btn_group {
+            width: 30%;
+            // display: flex;
             padding-left: 20px;
+            // justify-content: space-between;
 
             .purple{
                 background-color: #8656ef;
