@@ -1,0 +1,146 @@
+.invest_card {
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    margin: 0 auto;
+    padding-top: 60px;
+
+    .navbar {
+        width: 90%;
+        margin: 0 auto;
+        height: 60px;
+        background-color: #5160CE;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 5px;
+        position: relative;
+
+        .menu {
+            width:100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+
+            >div {
+                flex: 1;
+                text-align: center;
+                cursor: pointer;
+                color: #fff;
+                transition-duration: 1.5s;
+            }
+        }
+
+        .selector {
+            width: 150px;
+            height: 50px;
+            position: absolute;
+            background: #fff;
+            transition-duration: 0.6s;
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            top: 10px;
+            // left: 100px;
+
+            .left {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                bottom: 0px;
+                bottom: 0px;
+                left: -25px;
+                background: #fff;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background-color: #5160CE;
+                    border-radius: 25px;
+                    bottom: 0px;
+                    left: -25px;
+                    z-index: 2;
+                }
+            }
+
+            .right {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                bottom: 0px;
+                right: -25px;
+                background: #fff;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 25px;
+                    background-color: #5160CE;
+                    bottom: 0px;
+                    right: -25px;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+.left_right{
+    width: 100%;
+    height: auto;
+    .card_box {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 80px;
+    
+        >div:first-child {
+            width: 100%;
+            max-width: 1210px;
+            min-width: 990px;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+    
+    
+        .section {
+            flex-wrap: wrap;
+            align-items: center;
+    
+            .card {
+                box-sizing: border-box;
+                width: 48%;
+                height: 300px;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 0 10px rgba(159, 114, 255, 0.12);
+                border-radius: 10px;
+                margin-bottom: 20px;
+    
+    
+                h2 {
+                    color: green;
+                }
+    
+                p{
+                    font-weight: bold;
+                }
+    
+                // &:hover {
+                //     cursor: pointer;
+                //     box-shadow: 0 0 10px rgb(0, 123, 255);
+                // }
+            }
+        }
+    }
+}
+
+    
+}
