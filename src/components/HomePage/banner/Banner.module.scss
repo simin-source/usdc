@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
-    padding-top: 150px;
+    padding-top: 120px;
     padding-bottom: 80px;
 
     >div:first-child {
@@ -16,6 +16,7 @@
         margin: 0 auto;
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 150px !important;
 
         .logo {
             cursor: pointer;
@@ -30,32 +31,21 @@
         }
 
         .slogan {
-            width: 65%;
+            width: 80%;
             letter-spacing: 1.29px;
             color: #fff;
             font-size: 30px;
             font-weight: 700;
             padding-left: 20px;
             margin: 24px 0;
-        }
-
-        .desc {
-            width: 65%;
-            font-size: 18px;
-            font-weight: 500;
-            padding-left: 20px;
-            color: #fff;
-            margin-bottom: 24px;
             text-align: justify;
         }
 
         .btn_group {
             width: 30%;
-            // display: flex;
             padding-left: 20px;
-            // justify-content: space-between;
 
-            .purple{
+            .purple {
                 background-color: #8656ef;
                 border: 1px solid #8656ef;
                 border-radius: 5px;
@@ -73,10 +63,14 @@
                 color: #fff;
                 border-radius: 5px;
                 font-weight: 500;
+                margin-left: 20px;
 
-                &:hover {
-                    background-color: #fff;
-                    color: #8656ef;
+                a {
+                    width: 100%;
+
+                    &:hover {
+                        color: #8656ef;
+                    }
                 }
             }
         }

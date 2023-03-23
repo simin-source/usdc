@@ -15,9 +15,25 @@
 
     .title {
         text-align: center;
-        margin-bottom: 20px;
-        font-size: 20px;
+        margin-bottom: 40px;
+        font-size: 24px;
         font-weight: bold;
+    }
+
+    .btn {
+        margin-top: 20px;
+
+        a {
+            color: #000;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-right: 20px;
+
+            &:hover {
+                color: #3C78D8;
+            }
+        }
     }
 
     .section {
@@ -28,7 +44,7 @@
             box-sizing: border-box;
             width: 48%;
             height: 300px;
-            padding: 30px;
+            padding: 50px 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -46,14 +62,11 @@
                 color: green;
             }
 
-            p{
-                font-weight: bold;
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                text-align: justify;
             }
-
-            // &:hover {
-            //     cursor: pointer;
-            //     box-shadow: 0 0 10px rgb(0, 123, 255);
-            // }
         }
     }
 }

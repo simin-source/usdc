@@ -76,6 +76,22 @@ export default defineComponent({
                 InvestState.activeKey = InvestState.menuList?.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0]?.key;
                 updatePlay(InvestState.activeKey);
             }
+        } else {
+            this.current_index = 1;
+            this.s_width = '110px';
+            this.s_left = '305px';
+            if (FooterState.isFan) {
+                InvestState.menuList = investMenu2;
+            } else {
+                InvestState.menuList = investMenu;
+            }
+            if (decodeURI(window.location.search?.split('=')?.[3])) {
+                InvestState.activeKey = InvestState.menuList?.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0]?.key;
+                updatePlay(InvestState.activeKey);
+            } else {
+                InvestState.activeKey = 'cross-chain-swap';
+                updatePlay('cross-chain-swap');
+            }
         }
         watch(() => InvestState.activeKey, newValue => {
             if (newValue) updatePlay(newValue);
