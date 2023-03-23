@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 80px;
 
     >div:first-child {
@@ -73,11 +73,15 @@
                 color: #fff;
                 border-radius: 5px;
                 font-weight: 500;
-
-                &:hover {
-                    background-color: #fff;
+            a{
+                width: 100%;
+             &:hover {
+                    // background-color: #fff;
                     color: #8656ef;
                 }
+            }
+
+                
             }
         }
     }

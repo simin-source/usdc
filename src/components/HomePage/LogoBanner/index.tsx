@@ -48,7 +48,7 @@ export default defineComponent({
             animate();
         });
         return () => {
-            return <div class={`container ${logo_banner}`}>
+            return <div class={`container ${logo_banner}`} id='playBanner'>
                 <div>
                     <h3 class={title}>Widespread adoption</h3>
                     <div class={text}>From being the first, to the most used, stablecoin, and one of the most traded tokens by volume, Tether tokens have come a long way. Tether tokens are today the most widely adopted stablecoins across major exchanges, OTC desks, and wallets, including:</div>
