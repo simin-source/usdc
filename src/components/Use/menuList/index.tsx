@@ -1,12 +1,15 @@
 
 import { FooterState } from '@/views/footer/Footer';
-import { defineComponent, reactive, Fragment, watch } from 'vue';
-
-import { card, invest_card, left, left_right, menu, navbar, right, section, selector, use_box } from './index.module.scss';
+import { defineComponent, reactive, Fragment, watch,ref } from 'vue';
+import { ChevronDown, ChevronUpOutline} from '@vicons/ionicons5'
+import { Icon } from '@vicons/utils'
+import { card, invest_card, left, left_right, menu, navbar, right, section, selector, use_box,title } from './index.module.scss';
 export const Movingtab = reactive({
     activeKey: '' as string,
     menuList: [] as any,
 });
+
+
 const companyData = [
     {
         title: '入金、出金、存储、全球支付、全球汇款、全球收款',
@@ -115,6 +118,29 @@ const individualData2 = [
         link: '/investment/?fan=&from=use&item=眾籌',
     },
 ];
+const currencyData = [
+    {
+        title: 'Circle API',
+        des: '企业和品牌可使用 Circle API 来开发支持数字货币支付的产品，促进了 USDC 支付和一些其他功能。',
+        link: 'https://www.circle.com/en/usdc/developers#usdc-multichain',
+    },{
+        title: 'Visa',
+        des: 'Visa已经开始支持USDC作为结算货币，这是一个连接数字货币和法定货币的重要创举。Visa利用以太坊区块链，可以在20秒内完成USDC的交易，且几乎免费。Visa估计，每年有120万亿美元的支付是通过支票和电汇进行的，这些支付方式费用高昂且效率低下。Visa通过使用USDC，可以为商家和消费者提供更快速、更便宜、更透明的支付体验。',
+        link: 'https://www.visa.com.ag/about-visa/newsroom/press-releases/visa-network-to-settle-transactions-in-usd-coin-usdc.html',
+    },{
+        title: 'Master Card',
+        des: 'Master Card也支持了USDC',
+        link: '#',
+    },{
+        title: '中心化交易所',
+        des: '中心化交易所也为商家提供支付解决方案（如Coinbase Commerce、Binance Pay、Circle Pay），包括交易所托管的支付界面和帮助商家自行部署前端的API和SDK。商家和其客户使用同一交易所托管的钱包不会产生任何费率，因为钱款只是在同一托管钱包里的不同账户间转账。商家或其客户其中一方使用自托管钱包会产生区块链网络费，因为加密币会转账到另一个钱包地址。商家也可以选择在收款时把加密币自动转换成法币，并存在交易所托管的银行账户上或者直接存在商家自己的银行账户上。如果是后者，交易所需要帮商家开一个商业法币账户。',
+        link: '/investment/?fan=&from=use&item=支付',
+    },{
+        title: '其他',
+        des: '其他提供加密货币支付服务的公司。',
+        link: '/investment/?fan=&from=use&item=支付',
+    },
+]
 export default defineComponent({
     name: 'MenuListUse',
     data() {
@@ -122,6 +148,7 @@ export default defineComponent({
             s_left: '186px',
             current_index: 1,
             contentList: FooterState.isFan ? companyData2 : companyData as any,
+            fourCardsValue:false
         };
     },
     mounted() {
@@ -175,7 +202,7 @@ export default defineComponent({
                 <div class={`flex-center ${left_right}`}>
                     <div>
                         <div style={{ width: '100%', height: 'auto', position: 'relative', paddingTop: '50px', paddingBottom: '80px' }}>
-                            <div class="content flex-center" style={{ width: '100%', maxWidth: '1210px', minWidth: '990px', margin: '0 auto', flexDirection: 'column' }}>
+                            <div style={{ width: '100%', maxWidth: '1210px', minWidth: '990px', margin: '0 auto', flexDirection: 'column' }}>
                                 <div class={`flex-between ${section}`} style={{ flexWrap: 'wrap', alignItems: 'center' }}>
                                     {this.contentList?.map((item: any) => {
                                         return <div class={card} style={{
@@ -183,15 +210,15 @@ export default defineComponent({
                                             padding: '30px',
                                             display: 'flex',
                                             flexDirection: 'column',
-                                            justifyContent: 'space-around',
+                                            justifyContent: 'space-between',
                                             boxShadow: '0 0 10px rgba(159, 114, 255, 0.12)',
                                             borderRadius: '10px',
                                             marginBottom: '20px',
                                         }}>
                                             <h2>{item.title}</h2>
-                                            <p>{item.des}</p>
-                                            {!item.link.includes('fan') ? <a href={item.link} target="_blank">更多</a>
-                                                : <a href={item.link.replace('fan=', `fan=${FooterState.isFan}`)}>更多</a>}
+                                            <p style={{ fontWeight: 'bold'}}>{item.des}</p>
+                                            {!item.link.includes('fan') ? <a href={item.link} target="_blank" style={{display:'inline-block',marginTop: '10px',color:"#000", fontSize: '18px', fontWeight: 'bold'}}>更多</a>
+                                                : <a style={{display:'inline-block',marginTop: '10px',color:"#000", fontSize: '18px', fontWeight: 'bold'}} href={item.link.replace('fan=', `fan=${FooterState.isFan}` )}>更多</a>}
                                         </div>;
                                     })}
                                 </div>
@@ -200,6 +227,47 @@ export default defineComponent({
 
                     </div>
                 </div>
+                <div style={{ display: 'flex', flexDirection:'row',justifyContent:'space-between',width:"100%", boxShadow:' 0 0 10px rgba(159, 114, 255, 0.12)',height:'50px',padding:'0 10px',marginBottom: '20px',backgroundColor:'#F8F8FA'}}>
+                    <h2 style={{ height: '50px', letterSpacing: '-.2px', fontWeight: 'bolder' ,padding:'5px 10px',lineHeight:'50px'}}> 给自己的产品接入数字货币支付</h2>
+                    <div onClick={() => this.fourCardsValue = !this.fourCardsValue} style={{padding:'0 10px 0 0',lineHeight:'50px'}}>
+                        {this.fourCardsValue? <Icon size='36' color='#000'>
+                        <ChevronUpOutline></ChevronUpOutline>
+                        </Icon> : <Icon size='36' color='#000'>
+                            <ChevronDown></ChevronDown>
+                     </Icon>
+                   }
+                       
+                    </div>     
+                    
+                    {/* <i >加载更多</i> */}
+                </div>
+                {this.fourCardsValue ? <div style={{ width: '100%', height: 'auto', position: 'relative', borderRadius: '10px', backgroundColor: '#F8F8FA', padding:'10px'}}>
+                    <div style={{ width: '100%', maxWidth: '1210px', minWidth: '990px', margin: '0 auto', flexDirection: 'column' }}>
+                        <div class={`flex-between ${section}`} style={{ flexWrap: 'wrap', alignItems: 'center' }}>
+                                {currencyData.map(item => {
+                                    return <div class={card} style={{
+                                        boxSizing: 'border-box', width: '100%', height: '260px',
+                                        padding: '30px 10%',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'space-between',
+                                        boxShadow: '0 0 10px rgba(159, 114, 255, 0.12)',
+                                        borderRadius: '10px',
+                                        marginBottom: '20px',
+                                        background:'white'
+                                        
+                                    }}>
+                                        <h2>{item.title}</h2>
+                                        <p style={{ fontWeight: 'bold'}}>{item.des}</p>
+                                        {!item.link.includes('fan') ? <a href={item.link} target="_blank" style={{display:'inline-block',marginTop: '10px',color:"#000", fontSize: '18px', fontWeight: 'bold'}}>更多</a>
+                                            : <a style={{display:'inline-block',marginTop: '10px',color:"#000", fontSize: '18px', fontWeight: 'bold'}} href={item.link.replace('fan=', `fan=${FooterState.isFan}`)}>更多</a>}
+                                    </div>;
+                                    
+                                })}
+                        </div>
+                    </div>
+                </div>: <div></div>}
+               
             </div>
         </div>;
     },
