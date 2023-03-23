@@ -3,11 +3,11 @@ import { left, list, list_item, lr_box, right, text, title } from './index.modul
 const contentData = [{
     title: 'Why use Tether?',
     src: '/img/advangeimg/advantage_logo.png',
-    text: '无论是与传统金融货币相比，还是和其他的数字稳定币相比，USDC都具有很大的优势。'
+    text: '企业和个人都可以持有USDC来开展广泛的金融、消费、慈善。'
 }];
 
 export default defineComponent({
-    name: 'AleftRight',
+    name: 'UleftRight',
     render() {
         return <div class={`container ${lr_box}`}>
             <div class="content flex-center">
