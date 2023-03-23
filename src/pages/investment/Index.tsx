@@ -89,6 +89,7 @@ export default defineComponent({
                 InvestState.activeKey = InvestState.menuList?.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0]?.key;
                 updatePlay(InvestState.activeKey);
             } else {
+                InvestState.activeKey = 'cross-chain-swap';
                 updatePlay('cross-chain-swap');
             }
         }
