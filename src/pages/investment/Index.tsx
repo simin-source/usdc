@@ -18,7 +18,7 @@ if (window.location.search.includes('true')) {
     FooterState.isFan = true;
 }
 export const InvestState = reactive({
-    activeKey: '' as string,
+    activeKey: 'cross-chain-swap' as string,
     inviteItmes: investItems as { [key: string]: any },
     activePlayId: [] as any,
     activePlayList: FooterState.isFan ? itemCards2.items : itemCards.items as any,
@@ -49,8 +49,8 @@ export default defineComponent({
         };
     },
     mounted() {
-        updatePlay('default');
-        if (window.location.search.split('=')?.[2].includes('intoout')) {
+        updatePlay('cross-chain-swap');
+        if (window.location.search.split('=')?.[2]?.includes('intoout')) {
             this.current_index = 3;
             this.s_width = '150px';
             this.s_left = '935px';
@@ -60,10 +60,10 @@ export default defineComponent({
                 InvestState.menuList = intooutMenu;
             }
             if (decodeURI(window.location.search?.split('=')?.[3])) {
-                InvestState.activeKey = InvestState.menuList.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0].key;
+                InvestState.activeKey = InvestState.menuList?.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0]?.key;
                 updatePlay(InvestState.activeKey);
             }
-        } else if (window.location.search.split('=')?.[2].includes('use')) {
+        } else if (window.location.search.split('=')?.[2]?.includes('use')) {
             this.current_index = 2;
             this.s_width = '110px';
             this.s_left = '630px';
@@ -73,7 +73,7 @@ export default defineComponent({
                 InvestState.menuList = useMenu;
             }
             if (decodeURI(window.location.search?.split('=')?.[3])) {
-                InvestState.activeKey = InvestState.menuList.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0].key;
+                InvestState.activeKey = InvestState.menuList?.filter((item: any) => item.label === decodeURI(window.location.search?.split('=')?.[3]))?.[0]?.key;
                 updatePlay(InvestState.activeKey);
             }
         }
@@ -91,6 +91,7 @@ export default defineComponent({
                             this.current_index = 1;
                             this.s_width = '110px';
                             this.s_left = '305px';
+                            InvestState.activeKey = 'cross-chain-swap';
                             if (FooterState.isFan) {
                                 InvestState.menuList = investMenu2;
                             } else {
@@ -101,6 +102,7 @@ export default defineComponent({
                             this.current_index = 2;
                             this.s_width = '110px';
                             this.s_left = '630px';
+                            InvestState.activeKey = 'consume';
                             if (FooterState.isFan) {
                                 InvestState.menuList = useMenu2;
                             } else {
@@ -111,6 +113,7 @@ export default defineComponent({
                             this.current_index = 3;
                             this.s_width = '150px';
                             this.s_left = '935px';
+                            InvestState.activeKey = 'centralized-transaction';
                             if (FooterState.isFan) {
                                 InvestState.menuList = intooutMenu2;
                             } else {

@@ -60,9 +60,9 @@ export default defineComponent({
                                 </div>;
                             })}
                         </div>
-                        <div id="wrap1" >
+                        <div id="wrap1" class={wrap}>
                             {SwiperSlideData.map(e => {
-                                return <div onClick={() => onMenuClick}>
+                                return <div class={item} onClick={() => onMenuClick}>
                                     <a href={e.link} ><img src={e.src} alt={e.description_ch}/> </a>
                                 </div>;
                             })}
