@@ -3,7 +3,7 @@
     height: auto;
     position: relative;
     padding-top: 40px;
-    padding-bottom: 80px;
+    background-color: #FBFAFC;
 
     >div:first-child {
         width: 100%;
@@ -31,22 +31,29 @@
             padding: 30px;
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
             box-shadow: 0 0 10px rgba(159, 114, 255, 0.12);
             border-radius: 10px;
-            margin-bottom: 20px;
-            justify-content: space-between;
+            margin-bottom: 40px;
+            background-color: #fff;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
 
             h2 {
-                margin-top: 30px;
                 color: green;
+                margin-top: 30px;
             }
 
-            p{
-                margin-top: 20px;
-                
-                font-weight: bold;
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                text-align: justify;
+                margin-top: 30px;
             }
-
         }
     }
 }

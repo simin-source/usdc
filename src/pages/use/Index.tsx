@@ -1,10 +1,10 @@
+import AleftRight from '@/components/Asvantage/leftRight/index';
+import DropCards from '@/components/Use/dropCards/DropCards';
+import USevenCard from '@/components/Use/eightCards/index';
+import MenuListUse from '@/components/Use/menuList/index';
 import Footer from '@/views/footer/Footer';
 import Header from '@/views/header/Header';
 import { defineComponent, Fragment } from 'vue';
-import AleftRight from '@/components/Asvantage/leftRight/index';
-import MenuListUse from '@/components/Use/menuList/index'
-// import { } from './Index.module.scss';
-import USevenCard from '@/components/Use/eightCards/index'
 export default defineComponent({
     name: 'Use',
     render() {
@@ -12,7 +12,8 @@ export default defineComponent({
             <Header parent="use" />
             <AleftRight />
             <MenuListUse />
-            <USevenCard/>
+            <DropCards />
+            <USevenCard />
             <Footer parent="use" />
         </Fragment>;
     },
