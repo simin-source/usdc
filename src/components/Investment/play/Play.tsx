@@ -11,45 +11,50 @@ export default defineComponent({
     data() {
         return {
             searchVal: '',
-            list: InvestState.activePlayList
-        }
+            list: InvestState.activePlayList,
+        };
     },
     methods: {
         handleChange() {
             if (InvestState.searchValue) {
-                var str = InvestState.searchValue;
-                var upperStr = str.toUpperCase()
-                var lowerStr = str.toLowerCase();
-                let result: any = []
+                const upperStr: any = [];
+                const lowerStr: any = [];
+                const result: any = [];
+                // tslint:disable-next-line: no-var-keyword
                 for (var i = 0; i < InvestState.activePlayList.length; i++) {
                     //如果字符串中不包含目标字符会返回-1
+                    const lowName = InvestState.activePlayList[i].name.toLowerCase();
+                    lowerStr.push(lowName);
+                    const UPPName = InvestState.activePlayList[i].name.toUpperCase();
+                    upperStr.push(UPPName);
                     if (InvestState.activePlayList[i].name.indexOf(InvestState.searchValue) >= 0) {
+                        // || || ) {
                         result.push(InvestState.activePlayList[i]);
-                    } if (InvestState.activePlayList[i].name.indexOf(upperStr) >= 0) {
+                    }
+                    if (upperStr[i].indexOf(InvestState.searchValue) >= 0) {
                         result.push(InvestState.activePlayList[i]);
-                    } if (InvestState.activePlayList[i].name.indexOf(lowerStr) >= 0) {
+                    }
+                    if (lowerStr[i].indexOf(InvestState.searchValue) >= 0) {
+                        // tslint:disable-next-line: no-trailing-whitespace
                         result.push(InvestState.activePlayList[i]);
                     }
                 }
-                var newArr = Array.from(new Set(result));
-                InvestState.activePlayList = newArr
+                const newArr = Array.from(new Set(result));
+                InvestState.activePlayList = newArr;
+                // tslint:disable-next-line: no-console
                 console.log(result);
-
-                return InvestState.activePlayList
-
-
-
+                return InvestState.activePlayList;
             } else {
-                return InvestState.activePlayList
+                this.handelClear();
             }
 
         },
         handelClear() {
             if (!InvestState.searchValue) {
-                InvestState.activePlayList = this.list
-                return InvestState.activePlayList
+                InvestState.activePlayList = this.list;
+                return InvestState.activePlayList;
             }
-        }
+        },
     },
     render() {
         return <div class={`flex-start ${play_box}`}>
