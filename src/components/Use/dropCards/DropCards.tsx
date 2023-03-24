@@ -16,7 +16,14 @@ export default defineComponent({
             isSpread: false,
         };
     },
+    props: {
+        currentIndex: {
+            default: 1,
+            required: true,
+        },
+    },
     mounted() {
+
         watch(() => FooterState.isFan, newValue => {
             if (FooterState.isFan) {
                 this.dropList = currencyData2;
@@ -27,7 +34,7 @@ export default defineComponent({
     },
     render() {
         return <div class={`container ${drop_box}`}>
-            <div class="content flex-center">
+            {this.currentIndex == 1 ? <div class="content flex-center">
                 <div class="content flex-between">
                     <div class={drop_title}>{FooterState.isFan ? '給自己的產品接入數字貨幣支付' : '给自己的产品接入数字货币支付'}</div>
                     <div style={{ cursor: 'pointer' }} onClick={() => this.isSpread = !this.isSpread}>
@@ -49,7 +56,8 @@ export default defineComponent({
                         </div>;
                     })}
                 </div> : null}
-            </div>
+            </div> : <div></div>}
+
         </div>;
     },
 });
