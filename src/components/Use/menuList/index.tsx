@@ -1,13 +1,12 @@
 
 import { FooterState } from '@/views/footer/Footer';
-import { defineComponent, watch } from 'vue';
+import { defineComponent, watch, reactive } from 'vue';
 import { card, left, left_right, menu, navbar, right, selector, use_box, use_list } from './index.module.scss';
-
+import DropCards from '@/components/Use/dropCards/DropCards'
 import companyData from '@/assets/data/use/company.json';
 import companyData2 from '@/assets/data/use/company_fan.json';
 import individualData from '@/assets/data/use/individual.json';
 import individualData2 from '@/assets/data/use/individual_fan.json';
-
 export default defineComponent({
     name: 'MenuListUse',
     data() {
@@ -18,6 +17,8 @@ export default defineComponent({
         };
     },
     mounted() {
+        console.log(this.current_index);
+
         watch(() => FooterState.isFan, newValue => {
             if (FooterState.isFan) {
                 if (this.current_index === 1) {
@@ -75,6 +76,8 @@ export default defineComponent({
                         </div>;
                     })}
                 </div>
+                <DropCards currentIndex={this.current_index}></DropCards>
+
             </div>
         </div>;
     },
