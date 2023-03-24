@@ -8,10 +8,48 @@ import {
 
 export default defineComponent({
     name: 'Play',
+    data() {
+        return {
+            searchVal: '',
+            list: InvestState.activePlayList
+        }
+    },
     methods: {
         handleChange() {
+            if (InvestState.searchValue) {
+                var str = InvestState.searchValue;
+                var upperStr = str.toUpperCase()
+                var lowerStr = str.toLowerCase();
+                let result: any = []
+                for (var i = 0; i < InvestState.activePlayList.length; i++) {
+                    //如果字符串中不包含目标字符会返回-1
+                    if (InvestState.activePlayList[i].name.indexOf(InvestState.searchValue) >= 0) {
+                        result.push(InvestState.activePlayList[i]);
+                    } if (InvestState.activePlayList[i].name.indexOf(upperStr) >= 0) {
+                        result.push(InvestState.activePlayList[i]);
+                    } if (InvestState.activePlayList[i].name.indexOf(lowerStr) >= 0) {
+                        result.push(InvestState.activePlayList[i]);
+                    }
+                }
+                var newArr = Array.from(new Set(result));
+                InvestState.activePlayList = newArr
+                console.log(result);
+
+                return InvestState.activePlayList
+
+
+
+            } else {
+                return InvestState.activePlayList
+            }
 
         },
+        handelClear() {
+            if (!InvestState.searchValue) {
+                InvestState.activePlayList = this.list
+                return InvestState.activePlayList
+            }
+        }
     },
     render() {
         return <div class={`flex-start ${play_box}`}>
@@ -20,7 +58,7 @@ export default defineComponent({
                     {FooterState.isFan ? '玩法說明:' : '玩法说明:'}
                 </div>
                 <div class="search_input">
-                    <ElInput v-model={InvestState.searchValue} onChange={this.handleChange} size="large" placeholder="Please Input" clearable />
+                    <ElInput v-model={InvestState.searchValue} onChange={this.handleChange} size="large" placeholder="Please Input" clearable onClear={this.handelClear} />
                 </div>
             </div>
             <div class={card_list}>

@@ -21,7 +21,7 @@ export const InvestState = reactive({
     activeKey: 'cross-chain-swap' as string,
     inviteItmes: investItems as { [key: string]: any },
     activePlayId: [] as any,
-    activePlayList: FooterState.isFan ? itemCards2.items : itemCards.items as any,
+    activePlayList: FooterState.isFan ? itemCards2.items : itemCards.items as Array<any>,
     tagsList: FooterState.isFan ? tagsList2.tags : tagsList.tags as any,
     searchValue: '' as string,
     menuList: FooterState.isFan ? investMenu2 : investMenu as any,

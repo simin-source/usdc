@@ -73,7 +73,7 @@ export default defineComponent({
                         <div id="wrap1" class={wrap}>
                             {SwiperSlideData.map(e => {
                                 return <div class={item} onClick={() => onMenuClick}>
-                                    <a href={e.link} ><img src={e.src} alt={e.description_ch} /> </a>
+                                    <a href={e.link} target='_blank'><img src={e.src} alt={e.description_ch} /> </a>
                                 </div>;
                             })}
                         </div>
