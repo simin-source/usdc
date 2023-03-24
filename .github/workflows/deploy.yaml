@@ -1,36 +1,24 @@
-name: build-and-test
-
+name: deploy to tst
 on:
   push:
-  pull_request:
-    branches: [ tst-serve ]
-
-env:
-  AZURE_WEBAPP_NAME: DotNetWeb
-  AZURE_WEBAPP_PACKAGE_PATH: '.' # Set this to the path to your web app project, defaults to the repository root:
-  DOTNET_VERSION: '6.0.401' # The .NET SDK version to use
-
+    branches:
+      - tst-serve
 jobs:
-  build-and-test:
-
-    name: build-and-test-usdc
-    runs-on: usdc
-    strategy:
-      matrix:
-        os: [macOS-latest]
-
+  build:
+    runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '6.0.401'
-
-    - name: Install dependencies
-      run: dotnet restore
-      
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      # 切换分支
+      - name: Checkout
+        uses: actions/checkout@master
+      # - name: work around permission issue
+      #   run: git config --global --add safe.directory /github/workspace
+      # 使用 node:16.18.0
+      - name: use Node.js 16.18.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.18.0
+      # npm install
+      - name: npm install and build
+        run: |
+          npm install
+          npm run build
