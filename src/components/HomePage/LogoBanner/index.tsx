@@ -4,7 +4,7 @@ import {
     button_group, item, logo_banner, swiper_swper, text, title, wrap
 } from './index.module.scss';
 SwiperCore.use([Autoplay]);
-import jsonData from '@/assets/data/itemCards.json';
+import jsonData from '@/assets/data/invest/itemCards.json';
 import { FooterState } from '@/views/footer/Footer';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.scss';
@@ -61,7 +61,7 @@ export default defineComponent({
                         <a href={`/use/?fan=${FooterState.isFan}`}>了解更多详细用途</a>
                         <a href={`/investment/?fan=${FooterState.isFan}`}>了解更多投资方法</a>
                     </div>
-                    <div class={text}>以下平台均支持USDC，并提供了各种丰富的玩法：</div>
+                    <div class={text}>{FooterState.isFan ? '以下平臺均支持USDC，並提供了各種豐富的玩法：' : '以下平台均支持USDC，并提供了各种丰富的玩法：'}</div>
                     <div class={swiper_swper}>
                         <div id="wrap" class={wrap} ref="swiper" onMouseenter={mouseEenter} onMouseleave={mouseLeve}>
                             {SwiperSlideData.map(e => {

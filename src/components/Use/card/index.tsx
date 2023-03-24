@@ -1,42 +1,37 @@
+import useData from '@/assets/data/use/useCards.json';
+import useData2 from '@/assets/data/use/useCards_fan.json';
 import { FooterState } from '@/views/footer/Footer';
 import { defineComponent, watch } from 'vue';
 import {
-    card_box, section, card, title, btn
-} from './FourCard.module.scss';
-import contairData from '@/assets/data/home/usdcCards.json';
-import contairData2 from '@/assets/data/home/usdcCards_fan.json';
+    card, card_box, section
+} from './index.module.scss';
 
 export default defineComponent({
-    name: 'FourCard',
+    name: 'USevenCard',
     data() {
         return {
-            contentList: FooterState.isFan ? contairData2 : contairData as any,
+            contentList: FooterState.isFan ? useData2 : useData as any,
         };
     },
     mounted() {
         watch(() => FooterState.isFan, newValue => {
             if (FooterState.isFan) {
-                this.contentList = contairData2;
+                this.contentList = useData2;
             } else {
-                this.contentList = contairData;
+                this.contentList = useData;
             }
         });
     },
     render() {
         return <div class={`container ${card_box}`}>
             <div class="content flex-center">
-                <h3 class={title}>{FooterState.isFan ? '如何獲取USDC？' : '如何获取USDC？'}</h3>
                 <div class={`flex-between ${section}`}>
                     {this.contentList?.map((item: any) => {
                         return <div class={card}>
-                            <img src='/img/index/favicon.ico' alt="icon找不到" />
                             <h2>{item.title}</h2>
                             <p>{item.text}</p>
-                        </div>
+                        </div>;
                     })}
-                </div>
-                <div class={btn}>
-                    <a href={`/intoout/?fan=${FooterState.isFan}`}>查看更多详细的入金/出金方法</a>
                 </div>
             </div>
         </div>;
