@@ -9,7 +9,7 @@ jobs:
     steps:
       # 切换分支
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@tst-serve
       # - name: work around permission issue
       #   run: git config --global --add safe.directory /github/workspace
       # 使用 node:16.18.0
