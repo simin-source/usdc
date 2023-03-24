@@ -13,7 +13,7 @@ export default defineComponent({
                     <div class={text}>Launched in 2014, Tether tokens (USD₮) pioneered the stablecoin model and are the most widely traded. Tether tokens offer the stability and simplicity of fiat currencies coupled with the innovative nature of blockchain technology, representing a perfect combination of both worlds.</div>
                 </div>
                 <div class={right}>
-                    <img src="/img/index/bank.webp" alt="图片找不到" />
+                    <img src="../img/index/bank.webp" alt="图片找不到" />
                 </div>
             </div>
         </div>;

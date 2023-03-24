@@ -65,7 +65,7 @@ export default defineComponent({
                 <div>
                     {InvestState.activePlayList?.length > 0 ? InvestState.activePlayList?.map((item: any) => {
                         return <div class={card}>
-                            <div><img src={item.src ? item.src : '/img/index/card1.svg'} alt="logo找不到" class={card_logo} /></div>
+                            <div><img src={item.src ? `.${item.src}` : '../img/index/card1.svg'} alt="logo找不到" class={card_logo} /></div>
                             <div class={`flex-start ${tag_list}`}>
                                 {item.tag?.map((item_: any, index: number) => {
                                     const res = InvestState.tagsList?.filter((i: any) => i.id === item_.tag_id)?.[0];

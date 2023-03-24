@@ -18,18 +18,18 @@ export default defineComponent({
         },
     },
     render() {
-        return <div class={`container ${banner_box}`}>
+        return <div class={`container ${banner_box}`} style={{ backgroundImage: 'url(./img/index/bg.webp)'}}>
             <div class="content flex-center">
                 <div class={`flex-center ${logo}`}>
                     <img src="./logo.webp" alt="usdc_icon" />
                     <div>USDCoin</div>
                 </div>
                 <div class={slogan}>{FooterState.isFan ? '一種更快、更安全、更高效的全球匯款、消費和兌換方式。使用USDC隨時隨地的進行支付和金融服務' : '一种更快、更安全、更高效的全球汇款、消费和兑换方式。使用USDC随时随地的进行支付和金融服务'}</div>
-                <div class={btn_group}>;
+                <div class={btn_group}>
                     <ElButton type="primary" size="large" class={purple}><a href={`/intoout/?fan=${FooterState.isFan}`} style={{ color: '#fff' }}>入金</a></ElButton>
-                    <ElButton plain size="large" class={white}><a style={{ color: '#fff' }} onClick={this.JUmpScroll}>玩法</a></ElButton>;
-                </div >;
-            </div >;
+                    <ElButton plain size="large" class={white}><a style={{ color: '#fff' }} onClick={this.JUmpScroll}>玩法</a></ElButton>
+                </div >
+            </div >
         </div >;
     },
 });
