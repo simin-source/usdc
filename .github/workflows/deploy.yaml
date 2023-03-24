@@ -2,14 +2,14 @@ name: deploy to tst
 on:
   push:
     branches:
-      - tst-serve
+      - main
 jobs:
   build:
     runs-on: macOS-latest
     steps:
       # 切换分支
       - name: Checkout
-        uses: actions/checkout@tst-serve
+        uses: actions/checkout@main
       # - name: work around permission issue
       #   run: git config --global --add safe.directory /github/workspace
       # 使用 node:16.18.0
