@@ -1,0 +1,37 @@
+[
+    {
+        "title": "存储",
+        "des": "未开设Circle账户的企业及个人可以将USDC存入加密货币钱包中。",
+        "link": "/investment/?fan=&from=intoout&item=加密钱包"
+    },
+    {
+        "title": "投资",
+        "des": "未开设Circle账户的企业及个人可以使用USDC在各种中心化和去中心化交易所、借贷平台、质押平台、流动性平台、收益聚合平台、NFT交易市场等加密货币市场进行投资赚取收益。详细请看USDC投资指南。",
+        "link": "/investment/?fan=&from=invest&item=跨链转移/兑换"
+    },
+    {
+        "title": "借贷",
+        "des": "未开设Circle账户的企业及个人可以在各种中心化和去中心的借贷平台进行借贷，无需提供大量的抵押品和身份认证，直接借出USDC或其他数字货币来进行各种商业活动。详细请看USDC投资指南中“借贷”板块。",
+        "link": "/investment/?fan=&from=invest&item=借贷"
+    },
+    {
+        "title": "全球转账、支付",
+        "des": "通过加密货币钱包、交易所等应用，可高效、低成本地使用USDC进行24/7全天候、全球支付、汇款与收款。 ",
+        "link": "/investment/?fan=&from=use&item=慈善捐助"
+    },
+    {
+        "title": "消费",
+        "des": "一些在线商家和服务提供商已经开始接受数字货币支付，包括使用USDC进行购物、支付订阅费用、支付线上广告费用、支付游戏、参加在线赌博等等。",
+        "link": "/investment/?fan=&from=use&item=消费"
+    },
+    {
+        "title": "捐款",
+        "des": "全球的捐助者正在利用 USDC 为慈善事业和救灾筹集资金。",
+        "link": "/investment/?fan=&from=use&item=慈善捐助"
+    },
+    {
+        "title": "众筹",
+        "des": "USDC的易于访问性使得人们可以快速进行互联网原生的资本筹集来回应重要的事业。",
+        "link": "/investment/?fan=&from=use&item=重筹&筹款"
+    }
+]
